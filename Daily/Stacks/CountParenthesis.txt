@@ -1,1 +1,1 @@
-
+The given question is a step ahead of the Valid Parenthesis.In this question we need to find how many parenthesis we need to remove to get valid parenthesis.
