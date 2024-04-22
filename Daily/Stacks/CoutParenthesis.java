@@ -25,12 +25,12 @@ public class BalancedParenthesis {
       if(ch=='(')
       st.push(ch);
       else{
-        if(st.size()==0) ans+=1
+        if(st.size()==0) ans+=1;
         if(st.peek()=='(') st.pop();
       }
     }
     if(st.size()>0) ans+=st.size();
-    return ans
+    return ans;
   } 
   public static void main(String[] args) {
     Scanner sc=new Scanner(System.in);
