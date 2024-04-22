@@ -28,3 +28,9 @@ public class removeConsecuitveSubesequnce {
     }
   }
 }
+/*
+OUTPUT:-
+1
+3
+2
+*/
