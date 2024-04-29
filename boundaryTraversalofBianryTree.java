@@ -60,3 +60,4 @@ class Solution {
     return res; // returning the final result list
   }
 }
+reverse
