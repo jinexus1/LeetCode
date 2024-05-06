@@ -19,7 +19,7 @@
 //     }
 // }
 
-//Optimized Solution: log n 
+//Optimized Solution: log n
 class Solution {
     public double myPow(double x, int n) {
         double ans=1;
