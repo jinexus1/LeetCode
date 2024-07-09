@@ -23,6 +23,8 @@ class Solution {
 }
 
 //Approach -2(Sliding window and Two Pointer)
+//Time Complexity: O(n)
+//Space Complexity: O(1)
 class Solution {
   public int longestOnes(int[] nums, int k) {
     int n = nums.length;
