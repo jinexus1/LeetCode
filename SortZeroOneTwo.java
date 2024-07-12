@@ -35,3 +35,52 @@ class Solution {
     return head;
   }
 }
+
+
+//Approach 2: we make dummynode for each zero one two and one, as soon as we get encounter 
+//zero we point the zerosHead.next to temp and update it to zero.next for new zero if
+//a zero is encountered, this process is done for all the nodes untill temp!=null
+class Solution {
+  // Function to sort a linked list of 0s, 1s and 2s.
+  static Node segregate(Node head) {
+    if (head == null || head.next == null)
+      return head;
+
+    // Dummy nodes for 0s, 1s and 2s
+    // dummy nodes
+    Node zeroHead = new Node(-1);
+    Node oneHead = new Node(-1);
+    Node twoHead = new Node(-1);
+
+    // Current pointers for the three lists
+    Node zero = zeroHead, one = oneHead, two = twoHead;
+
+    // Traverse the list and connect nodes to corresponding lists
+    Node temp = head;
+    while (temp != null) {
+      if (temp.data == 0) {
+        zero.next = temp;// pointing the zero to temp
+        zero = zero.next;// now shifiting the pointer
+      } else if (temp.data == 1) {
+        one.next = temp;// pointing the one to temp
+        one = one.next;// now shifiting the pointer
+      } else if (temp.data == 2) {
+        two.next = temp;// pointing the one two to temp
+        two = two.next;// now shifiting the pointer
+      }
+      temp = temp.next;
+      // moving the temp pointer to the next node
+    }
+
+    // Connect the three lists
+    // If there are no ones then connect the zero list to twoHead
+    zero.next = (oneHead.next != null) ? oneHead.next : twoHead.next;
+    one.next = twoHead.next;
+    two.next = null;
+
+    // The head of the new list
+    head = zeroHead.next;
+
+    return head;
+  }
+} 
