@@ -40,6 +40,8 @@ class Solution {
 //Approach 2: we make dummynode for each zero one two and one, as soon as we get encounter 
 //zero we point the zerosHead.next to temp and update it to zero.next for new zero if
 //a zero is encountered, this process is done for all the nodes untill temp!=null
+
+//Advantage: Done in single traversal
 class Solution {
   // Function to sort a linked list of 0s, 1s and 2s.
   static Node segregate(Node head) {
